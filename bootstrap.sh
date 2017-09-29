@@ -2,6 +2,4 @@
 
 sudo easy_install pip
 
-## sudo pip install ansible
-
-pip install --user virtualenv
+sudo pip install ansible
