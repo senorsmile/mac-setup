@@ -1,12 +1,16 @@
 ---
 - name: AWX Deps
-  hosts: all
+  hosts: shaun_home
   become: False
-  vars_prompt:
-    - name: "ansible_become_pass"
-      prompt: "Enter password"
-      private: yes
+  #vars_prompt:
+  #  - name: "ansible_become_pass"
+  #    prompt: "Enter password"
+  #    private: yes
   roles:
-    - role: geerlingguy.homebrew
+    - role: sudoers
+      tags: sudoers
     - role: pip_mac
+      tags: pip_mac
+    - role: geerlingguy.homebrew
+      tags: homebrew
 

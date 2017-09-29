@@ -1,0 +1,55 @@
+---
+pip_install_packages:
+  - glances
+
+homebrew_installed_packages:
+  - autoconf
+  - bash
+  - bash-completion
+  - colordiff
+  - coreutils
+  - cowsay
+  - diff-so-fancy # fancy git diff
+  - git
+  - iperf
+  - jq
+  - macvim
+  - mcrypt
+  - mosh
+  - nmap
+  - openssl
+  - pv
+  - p7zip
+  - readline
+  - ripgrep
+  - sqlite
+  - ssh-copy-id
+  - tmux
+  - wget
+  - wrk
+  - youtube-dl
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - amethyst
+  - anki
+  - caffeine
+  - docker
+  - firefox
+  - google-chrome
+  - iterm2
+  - macvim
+  - nvalt
+  - sequel-pro
+  - skitch
+  - slack
+  - transmit
+  - vagrant
+  - virtualbox
+  - virtualbox-extension-pack
+  - spectacle
+  - seafile-client
+  - sourcetree
+  - skype
+  - vlc
+

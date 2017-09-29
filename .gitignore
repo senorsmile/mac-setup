@@ -100,3 +100,9 @@ venv*
 
 # mypy
 .mypy_cache/
+
+# vim
+*.swp
+
+# ansible
+*.retry
