@@ -23,7 +23,7 @@ fi
 echo "****** VAGRANT_MODE= ${VAGRANT_MODE}"
 
 
-source use_ansible_20.sh
+#source use_ansible_20.sh
 
 #starttime=$(date)
 
