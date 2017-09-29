@@ -8,4 +8,4 @@
 - name: Ensure path for pip --user
   lineinfile:
     path: "{{ ansible_env.HOME }}/.bash_profile"
-    line: export PATH="$HOME/Library/Python/2.7/bin:$PATH"' >> "$HOME/.bash_profile
+    line: export PATH="$HOME/Library/Python/2.7/bin:$PATH"
