@@ -1,0 +1,7 @@
+---
+- name: AWX Deps
+  hosts: all
+  become: True
+  roles:
+    - role: geerlingguy.homebrew
+
