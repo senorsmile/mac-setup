@@ -1,9 +1,17 @@
 ---
+- name: Check if pip installed
+  stat: 
+    path: /usr/local/bin/pip2
+  register: pip2_stat
+  ignore_errors: True
+
 - name: easy_install pip
   become: True
   easy_install:
     name: pip
     state: latest
+  when: not pip2_stat.stat.exists
+
 
 - name: Ensure path for pip --user
   lineinfile:

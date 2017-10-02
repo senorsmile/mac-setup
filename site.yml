@@ -14,3 +14,38 @@
     - role: geerlingguy.homebrew
       tags: homebrew
 
+  ## TODO:
+    # copy id_rsa*
+    # automate IPSec VPN?
+    # https://github.com/geerlingguy/ansible-role-mas
+    # https://github.com/fubarhouse/ansible-role-macdock
+
+  post_tasks:
+    - name: Create folders 
+      file:
+        path: "{{ item }}"
+        state: directory
+      with_items:
+        - "{{ ansible_env.HOME }}/Seafile/scripts"
+        #- "{{ ansible_env.HOME }}/.vim/"
+
+
+    - name: Symlink bash stuff
+      file:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        state: link
+      with_items:
+        - src: "{{ ansible_env.HOME }}/Seafile/scripts"
+          dest: "{{ ansible_env.HOME }}/scripts"
+        - src: "{{ ansible_env.HOME }}/Seafile/misc"
+          dest: "{{ ansible_env.HOME }}/misc"
+        - src: "{{ ansible_env.HOME }}/Seafile/scripts/mac/bashrc"
+          dest: "{{ ansible_env.HOME }}/.bashrc"
+        - src: "{{ ansible_env.HOME }}/Seafile/scripts/mac/vimrc"
+          dest: "{{ ansible_env.HOME }}/.vimrc"
+        - src: "{{ ansible_env.HOME }}/Seafile/scripts/ubuntu/vimdir"
+          dest: "{{ ansible_env.HOME }}/.vim"
+        
+      tags: symlink
+        

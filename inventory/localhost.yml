@@ -1,5 +1,5 @@
 ---
-all:
+shaun_home:
   hosts:
     localhost:
       ansible_connection: local
